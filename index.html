@@ -446,6 +446,8 @@ function setGlyphTable (table) {
 
   // Draw the xadvance/xoffset limits
   // (We need to get the actual cell position before hand)
+  console.log(table, table.find, table.find('div.before_xoffset'));
+  
   const left_xoffset = table.find('div.before_xoffset')[0].offsetLeft
   xoffset_limit = $('<div class="xoffset_limit limit"></div>').css('left', (left_xoffset - 1) + 'px') // -1 accounts for first border of table
   table.append(xoffset_limit)
